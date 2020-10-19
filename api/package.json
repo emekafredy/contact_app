@@ -1,0 +1,38 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "server side for contact_app",
+  "main": "index.js",
+  "author": "emeka",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec babel-node ./",
+    "start": "babel-node ./",
+    "mig": "babel-node ./server/db/migrations.js",
+    "seed": "yarn mig && babel-node ./server/db/seeders.js",
+    "drop": "babel-node ./server/db/drop.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "fancy-log": "^1.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.11",
+    "pg": "^8.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.21.2"
+  }
+}
